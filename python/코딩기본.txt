@@ -1,0 +1,172 @@
+짝수/홀수 판별
+num = int(input("숫자 입력 : "))
+
+if num % 2 == 0:
+    print("짝수")
+
+else:
+    print("홀수")
+
+
+
+짝수만 출력
+for i in range(1, 11):
+
+    if i % 2 == 0:
+        print(i)
+
+문자열 3번 출력
+text = input("문자 입력 : ")
+
+for i in range(3):
+    print(text)
+
+
+
+1~100사이의 5의 배수 갯수
+count = 0
+
+for i in range(1, 101):
+
+    if i % 5 == 0:
+        count += 1
+
+print(count)
+
+
+
+짝수 단만 출력
+for dan in range(2, 10):
+
+    if dan % 2 == 0:
+
+        print(f"\n{dan}단")
+
+        for i in range(1, 10):
+            print(f"{dan} x {i} = {dan*i}")
+
+
+369게임
+for dan in range(2, 10):
+
+    if dan % 2 == 0:
+
+        print(f"\n{dan}단")
+
+        for i in range(1, 10):
+            print(f"{dan} x {i} = {dan*i}")
+
+
+숫자 맞추기 게임
+
+import random
+
+answer = random.randint(1, 10)
+
+while True:
+
+    num = int(input("숫자 입력 : "))
+
+    if num == answer:
+        print("정답!")
+        break
+
+    else:
+        print("틀림!")
+
+
+
+
+가위바위보 게임
+import random
+
+game = ["가위", "바위", "보"]
+
+computer = random.choice(game)
+
+user = input("가위/바위/보 입력 : ")
+
+print("컴퓨터 :", computer)
+
+if user == computer:
+    print("무승부")
+
+elif (
+    (user == "가위" and computer == "보") or
+    (user == "바위" and computer == "가위") or
+    (user == "보" and computer == "바위")
+):
+    print("승리!")
+
+else:
+    print("패배!")
+
+
+
+
+업다운게임
+import random
+
+answer = random.randint(1, 100)
+
+while True:
+
+    num = int(input("숫자 입력 : "))
+
+    if num > answer:
+        print("DOWN")
+
+    elif num < answer:
+        print("UP")
+
+    else:
+        print("정답!")
+        break
+
+
+
+로그인 시스템
+id = "admin"
+pw = "1234"
+
+user_id = input("아이디 : ")
+user_pw = input("비밀번호 : ")
+
+if user_id == id and user_pw == pw:
+    print("로그인 성공")
+
+else:
+    print("로그인 실패")
+
+
+타이머
+import time
+
+sec = 5
+
+while sec > 0:
+
+    print(sec)
+
+    time.sleep(1)
+
+    sec -= 1
+
+print("시간 종료!")
+
+
+
+미니 RPG
+player_hp = 100
+monster_hp = 50
+
+while monster_hp > 0:
+
+    attack = int(input("공격력 입력 : "))
+
+    monster_hp -= attack
+
+    print(f"몬스터 체력 : {monster_hp}")
+
+    if monster_hp <= 0:
+        print("몬스터 처치!")
