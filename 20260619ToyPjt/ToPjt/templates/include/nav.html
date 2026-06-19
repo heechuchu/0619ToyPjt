@@ -1,0 +1,37 @@
+<link href="{{ url_for('static', filename='css/include/nav.css')}}" rel="stylesheet">
+    <nav>
+        <div class="nav_wrap">
+            
+            <a href="/">홈</a>
+            |
+
+            {% if session.get('signinedMemberId') %}
+
+            <a href="/member/modify_form">회원정보수정</a>
+            |
+            <a href="/member/signout_confirm">로그아웃</a>                     
+            |
+            <a href="/member/delete_confirm">회원정보삭제</a> 
+            |
+            {% else %}
+            <a href="/member/signup_form">회원가입</a>
+            |
+            <a href="/member/signin_form">로그인</a>
+            {% endif %}
+    </div>
+ 
+        
+
+        <div class="service_menu">
+            |
+            <a href="/bank">Bank</a>
+            |
+            <a href="/oneline">Oneline Diary</a>
+            |
+            <a href="/memo">Memo</a>
+            |
+            <a href="/todo">Todo List</a>
+            |
+        </div>
+
+    </nav>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>계좌 조회</title>
+    
+</head>
+<body>
+
+    <h2>내 계좌 목록</h2>
+    <table border="1">
+        
+
+        <tr>
+            <th>계좌 번호</th>
+            <th>계좌 잔액</th>
+        </tr>
+        {% if accounts %}
+        {% for account in accounts %}
+        <tr>
+            <td>{{ account.accountNo }}</td>
+            <td>{{ account.balance }}원</td>
+        </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td colspan="2">생성된 계좌가없습니다.</td>
+        </tr>
+        {% endif %}
+    </table>
+  
+
+    
+    {% include 'include/footer.html' %}
+    
+</body>
+</html>

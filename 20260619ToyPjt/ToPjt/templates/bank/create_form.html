@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>계좌 생성</title>
+    <link href="{{ url_for('static',filename='css/common.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='css/member.css')}}" rel="stylesheet">
+    <script src="{{ url_for('static',filename='js/member.js')}}"></script>
+  
+</head>
+<body>
+
+    <article id="create_wrap">
+        <div class="create_form">
+            <form action="/bank/create_confirm" method="post">
+                <input type="submit" value="계좌 생성">
+               
+            </form>
+            </div>
+    </article>
+    {% include 'include/footer.html' %}
+</body>
+</html>

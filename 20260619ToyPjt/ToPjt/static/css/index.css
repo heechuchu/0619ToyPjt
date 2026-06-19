@@ -1,0 +1,15 @@
+
+/* article start */
+article {
+    text-align: center;
+    margin: 50px 0;
+}
+
+article div.index img {
+    min-width: 500px;
+    max-width: 500px;
+}
+/* article end */
+
+
+
